@@ -1,0 +1,46 @@
+<!DOCTYPE html sheet 5.3>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title> BMI calculate CREATE using java </title>
+
+    <style type="text/css">
+    body {margin:50px};
+    
+    </style>
+    </head>
+
+    <body>
+        <h1> BMI calculate CREATE using javascripthhh </h1>
+        <label for ="weght"> Your wieght (kg): </label>
+        <input type="number" id ="wieght" autocomplete="off"> <br> <br>
+
+        <label for ="height"> Your height(cm): </label>
+        <input type="number" id ="height" autocomplete="off"> <br> <br>
+
+        <input type="button" on Click="calc()" value="Calculate BMI">
+
+    <p> Your BMI: <span id = "result"></span></p> 
+    <p> This means your BMI: <span id =" message"> </span></p>
+        
+        <script> 
+           function bmiCalculate()
+           const time = new date().getHours();
+            var height =document.getElementById("height").value;
+            var weight =document.getElementById("wieght").value;
+            var height_m=height/100;
+            var bmi = weight/(m*m);
+           
+            let bmi_mean;
+            if(bmi<18.5)
+            bmi_mean =" underweghtinh";
+            else if (bmi>18.5 && bmi<24.9)
+            bmi_mean="healthy Weight";
+            else if (bmi>25&bmi<29.9) 
+            bmi_mean="Over Weight";
+            else if (bmi>18.5&&bmi<24.9)
+
+    </script>
+    </body>
+</html>
+

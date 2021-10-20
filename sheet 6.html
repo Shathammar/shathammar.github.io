@@ -1,0 +1,63 @@
+<!DOCTYPE html sheet 6>
+<html lang ="en">
+    <head>
+        <title> form-vaildation.html </title>
+
+       <style> 
+       #e1 , #e2 , #e3 , #e4 { color: red;}
+
+    </style>
+
+       <script>
+            function validateform()
+            {
+                 var fullname= document.getElementById ("name").value;
+                 var Userame= document.getElementsById ("user").value;
+                 var password= document.getElementById("password").value;
+
+
+            }
+            // name should'
+        var regEx = /^[A-Za-z]+$/;
+        if (!(match(regEx)))
+        {
+            document.getElementById('e1').inner
+            document.
+    }
+    
+        </script>
+        </head>
+        
+        <body>
+            <h1> sign up </h1>
+            <form onsubmit="return validateform();">
+
+             <!--full name field-->
+    <label for="Full Name"> Full Name:  </label> 
+     <input type="text" id="full name"  name="full name"> <span id="e2"></span> 
+     <br> <br>
+
+     <!--user name field-->
+    <label for="user Name"> User Name:</label> 
+    <input type="text" id="user name" name="user name"> 
+    <br> <br>
+
+    <!--password field-->
+    <label for="password"> password:</label> 
+    <input type="text" id="password" name="password"> 
+    <br> <br>
+
+    <!--confriun password field-->
+    <label for="confriun password"> confriun password:</label> 
+    <input type="text" id="confriun password" name=" confriun password"> 
+    <br> <br>
+
+<input type ="submit" value ="sign up">
+</form>
+
+
+
+        </body>
+</html>
+
+
