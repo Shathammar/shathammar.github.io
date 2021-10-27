@@ -1,63 +1,87 @@
-<!DOCTYPE html sheet 6>
-<html lang ="en">
+<!DOCTYPE html>
+<html>
     <head>
-        <title> form-vaildation.html </title>
+        <style>
+            .e { color: red;  }
+        </style>
+        <script>
+            function validateForm () {
+                var r = true;
+                var fullName=document.getElementById("fuullname").value;
+                var userName=document.getElementById("username").value;
+                var password=document.getElementById("password").value;
+                var ConfrimPassword=document.getElementById("Confrimpassword").value;
 
-       <style> 
-       #e1 , #e2 , #e3 , #e4 { color: red;}
+                //name shold contaibn only letter
 
-    </style>
+                var regEx = /^[A-Za-z]+$/;
+                var regEx2 = /(?=.*\d)(?=.*[a-z])(?=.*\w)/;
 
-       <script>
-            function validateform()
-            {
-                 var fullname= document.getElementById ("name").value;
-                 var Userame= document.getElementsById ("user").value;
-                 var password= document.getElementById("password").value;
+                //full name
 
+                if (!(x.match(regEx)))  {
+                document.getElementById('fullnameError').innerHTML= "* only letter is allowed";
+                document.getElementById('fullname').style.borderColor='red';
+                r = false;    } 
+                else   {
+                    document.getElementById('fullnameError').innerHTML= " ";
+                    document.getElementById('name').style.borderColor='black';   }
 
-            }
-            // name should'
-        var regEx = /^[A-Za-z]+$/;
-        if (!(match(regEx)))
-        {
-            document.getElementById('e1').inner
-            document.
-    }
-    
-        </script>
-        </head>
-        
-        <body>
-            <h1> sign up </h1>
-            <form onsubmit="return validateform();">
+                //user name
 
-             <!--full name field-->
-    <label for="Full Name"> Full Name:  </label> 
-     <input type="text" id="full name"  name="full name"> <span id="e2"></span> 
-     <br> <br>
+                if (username.length == 0 )    {
+                    document.getElementById('usernameError').innerHTML="*username must be filed out";
+                    document.getElementById('username').style.borderColor='red';
+                r = false;    } 
+                else     {
+                    document.getElementById('usernameError').innerHTML=" ";
+                    document.getElementById('username').style.borderColor='black';  }
 
-     <!--user name field-->
-    <label for="user Name"> User Name:</label> 
-    <input type="text" id="user name" name="user name"> 
-    <br> <br>
+                //password
 
-    <!--password field-->
-    <label for="password"> password:</label> 
-    <input type="text" id="password" name="password"> 
-    <br> <br>
+                if (password.length == 0) {
+                    document.getElementById('passwordError').innerHTML= "password must be filed out";
+                    document.getElementById('password').style.borderColor='red';
+                    r = false; }
+               else {
+                    document.getElementById('passwordError').innerHTML= "";
+                    document.getElementById('password').style.borderColor='black';     }
 
-    <!--confriun password field-->
-    <label for="confriun password"> confriun password:</label> 
-    <input type="text" id="confriun password" name=" confriun password"> 
-    <br> <br>
+                //confrim password
 
-<input type ="submit" value ="sign up">
+                if (!(password == Confrimpassword))  {
+                    document.getElementById('confrimpasswordError').innerHTML= " your password does not match";
+                    document.getElementById('confrimpassword').style.borderColor='red';
+                    return false;    }
+                    return r;   }
+ 
+            </script>
+            </head>
+
+        <!--SIGN UP-->
+
+            <body> 
+                <h1> SIGN UP </h1>
+                <form onsubmit="return validateForm()">
+
+                Full Name: 
+                <input type="text" id="name" >
+                <lable id="fullnameError" class="e"></lable> <br><br>
+            
+                User Name:
+                  <input type="text" id="username"> 
+                  <label id="usernameError" class="e"></label> <br><br>
+
+                password:
+                   <input type="password" id="pass"> 
+                   <label id=" passwordError" class="e"></label><br><br>
+
+                Confrim password:
+                    <input type="Confrim password" id="Confrim password"> 
+                    <label id="confrimpasswordError" class="e"></label> <br><br>
+                    
+                    <input type="submit" value="Submit">
+                     
 </form>
-
-
-
-        </body>
+</body>           
 </html>
-
-
